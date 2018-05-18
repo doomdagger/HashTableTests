@@ -1,0 +1,5 @@
+#!/bin/sh
+COMPILE_FLAGS="-march=native -std=c++11 -O3"
+clang++ $COMPILE_FLAGS -o main.clang++.o -c main.cpp
+clang++ $COMPILE_FLAGS -o SpookyHash/SpookyV2.clang++.o -c SpookyHash/SpookyV2.cpp
+clang++ -o hash-table-tests.clang++ main.clang++.o SpookyHash/SpookyV2.clang++.o

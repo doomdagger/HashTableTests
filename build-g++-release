@@ -1,0 +1,5 @@
+#!/bin/sh
+COMPILE_FLAGS="-march=native -std=c++11 -O3"
+g++ $COMPILE_FLAGS -o main.g++.o -c main.cpp
+g++ $COMPILE_FLAGS -o SpookyHash/SpookyV2.g++.o -c SpookyHash/SpookyV2.cpp
+g++ -o hash-table-tests.g++ main.g++.o SpookyHash/SpookyV2.g++.o
